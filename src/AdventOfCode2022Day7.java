@@ -1,5 +1,3 @@
-
-
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
@@ -131,7 +129,7 @@ public class AdventOfCode2022Day7 {
 		}
 
 		if (fileSizes.containsKey(directory.getName())) {
-			fileSizes.put(directory.getName() + totalSize, totalSize);
+			fileSizes.put(directory.getName() + directory.hashCode(), totalSize);
 		}
 		else {
 			fileSizes.put(directory.getName(), totalSize);
